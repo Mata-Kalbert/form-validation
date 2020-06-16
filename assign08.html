@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main08.css" type="text/css">
+    <title>Purchase Form</title>
+</head>
+<body>
+    <main>
+        <form name="purchaseform">
+            <img src="bookstore.png" alt="Bookstore Logo">
+            <h1 class="title">Your Order</h1>
+            <label class="subtitle">First Name</label><br>
+            <input type="text" name="firstname"><span id="firstnameerror"></span><br>
+            <label class="subtitle">Last Name</label><br>
+            <input type="text" name="lastname"><span id="lastnameerror"></span><br>
+            <label class="subtitle">Address</label><br>
+            <textarea name="address" cols="30" rows="5"></textarea><span id="addresserror"></span><br>
+            <label class="subtitle">Phone Number</label><br>
+            <input type="text" name="phone"><span id="phoneerror"></span><br>
+            
+            <label class="subtitle">Your Order</label><br>
+            <input type="checkbox" name="item" value="3" onchange="checkTotal()">
+            <label> Pencils $3</label><br>
+            <input type="checkbox" name="item" value="7" onchange="checkTotal()">
+            <label> Notebook $7</label><br>
+            <input type="checkbox" name="item" value="2" onchange="checkTotal()">
+            <label> Eraser $2</label><br>
+            <input type="checkbox" name="item" value="6" onchange="checkTotal()">
+            <label> Colored Pens $6</label><br>
+            <label class="subtitle">Total $</label><br>
+            <input type="text" size="2" name="total" value="0"/><br>
+            
+            <label class="subtitle">Credit Card Type</label><br>
+            <input type="radio" name="card" value="visa">
+            <label>Visa</label><br>
+            <input type="radio" name="card" value="master">
+            <label>Master Card</label><br>
+            <input type="radio" name="card" value="american">
+            <label>American Express</label><br>
+            
+            <label class="subtitle">Credit Card Number</label><br>
+            <input type="text" name="creditcard"><span id="carderror"></span><br>
+            <label class="subtitle">Credit Card Expiration Date</label><br>
+            <input type="text" name="expdate"><span id="carddateerror"></span><br>
+            
+            <input type="button" value="Reset" id="clear" onclick="clearform()"></input>
+            <input type="button" value="Submit" name="validate" onclick="checkForm()"></input>
+        </form>
+    </main>
+<script src="script.js"> </script>
+</body>
+</html>
